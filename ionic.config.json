@@ -1,0 +1,7 @@
+{
+  "name": "car-parking-locator",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
