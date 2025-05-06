@@ -4,6 +4,9 @@ Aplicație mobilă realizată în **Ionic + Capacitor** care îți salvează loc
 
 ---
 
+## 📸 Capturi de ecran
+![Screenshot 1](./src/assets/home.png)
+
 ## 📱 Funcționalități
 
 - ✅ Salvează locația GPS curentă
