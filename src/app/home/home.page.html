@@ -1,20 +1,35 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
+<ion-header>
+  <ion-toolbar color="primary">
     <ion-title>
-      Blank
+      🚘 Unde mi-am parcat?
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content class="ion-padding">
+  <div class="card-wrapper">
+    <div class="custom-card">
+      <h2 class="card-title">🚗 Aplicație de parcare</h2>
+      <p class="card-subtitle">Fără internet. Fără server. Doar GPS.</p>
 
-  <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+      <ion-button expand="block" class="btn-save" (click)="saveLocation()">
+        🚘 AM PARCAT AICI
+      </ion-button>
+
+      <ion-button expand="block" class="btn-find" (click)="openInMaps()">
+        🔍 GĂSEȘTE-MI MAȘINA
+      </ion-button>
+    </div>
+  </div>
+
+  <div *ngIf="carLocation" class="location-info ion-text-center">
+    <ion-icon name="star" color="warning"></ion-icon>
+    <p class="saved-title">Locație salvată:</p>
+    <p>Lat: {{ carLocation.latitude.toFixed(5) }}</p>
+    <p>Lng: {{ carLocation.longitude.toFixed(5) }}</p>
+
+    <div id="map" class="leaflet-map"></div>
+
+
   </div>
 </ion-content>
